@@ -7,6 +7,7 @@
 *.swp
 .coverage
 .env*
+.installed.cfg
 .settings/
 build/
 dist/
@@ -15,3 +16,7 @@ lib/
 node_modules/
 package.json
 var/
+parts/
+bin/
+eggs/
+develop-eggs/
