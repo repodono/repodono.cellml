@@ -14,6 +14,10 @@ require this will need to make use of ``zc.buildout`` on the accompanied
 process to install the ``cgrspy`` package which this package depends
 upon.
 
+Note that in order for the cellml-api to build, ``omniidl`` must also
+be available to convert the interface definition files into a form
+appropriate for C++.
+
 Roughly speaking, this may be done inside a virtualenv like so:
 
 .. code:: console
@@ -44,11 +48,18 @@ Roughly speaking, this may be done inside a virtualenv like so:
       Running setup.py install for cgrspy ... done
     Successfully installed cgrspy-1.2.0
 
-The final ``pip install`` step must pass the ``build_ext`` options using
+The final ``pip install`` step passes the ``build_ext`` options using
 the ``--global-option`` of ``pip`` such that the compilation process
 will produce the correct shared object files so that cgrspy will
 function correctly inside the virtual environment using the libraries
 compiled using ``zc.buildout``.
+
+Once the C++ dependencies are fully installed, ensure that the package
+is also installed using:
+
+.. code:: console
+
+    $ pip install -e .
 
 Demo
 ----

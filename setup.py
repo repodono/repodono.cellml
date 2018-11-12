@@ -38,6 +38,7 @@ setup(
         'setuptools',
         # -*- Extra requirements: -*-
         'cgrspy',
+        'requests',
     ],
     extras_require={
     },
