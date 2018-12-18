@@ -1,15 +1,16 @@
 import unittest
 import pkg_resources
 
-from repodono.cellml.model import ModelLoader
+from repodono.cellml.model import RequestsModelLoader
 from repodono.cellml.testing.session import FSSession
 
 
-class ModelLoaderTestCase(unittest.TestCase):
+class RequestsModelLoaderTestCase(unittest.TestCase):
 
     def setUp(self):
-        self.loader = ModelLoader(FSSession(pkg_resources.resource_filename(
-            'repodono.cellml.testing', 'data')))
+        self.loader = RequestsModelLoader(
+            FSSession(pkg_resources.resource_filename(
+                'repodono.cellml.testing', 'data')))
 
     def assertComponentName(self, componentSet, name):
         comp = componentSet.getComponent(name)

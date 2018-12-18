@@ -12,7 +12,7 @@ from repodono.cellml.bootstrap import cellml
 logger = logging.getLogger(__name__)
 
 
-class ModelLoader(object):
+class RequestsModelLoader(object):
 
     def __init__(self, session=requests.Session()):
         self.session = session

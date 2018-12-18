@@ -4,9 +4,7 @@ from os.path import (
     join,
     splitext,
 )
-# from os import listdir
 from repodono.cellml.bootstrap import (
-    # cellml,
     celedsexporter,
 )
 
