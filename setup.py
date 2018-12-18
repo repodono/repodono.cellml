@@ -39,6 +39,10 @@ setup(
         # -*- Extra requirements: -*-
         'cgrspy>=1.3.0',
         'requests',
+
+        # development dependencies.
+        'repodono.task'
+        ' @ git+https://github.com/repodono/repodono.task.git@master',
     ],
     extras_require={
     },
