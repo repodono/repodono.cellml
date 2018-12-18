@@ -24,7 +24,7 @@ before_install:
   - 'export CCFLAGS="-std=c++11"'
   - 'export CXXFLAGS="-std=c++11"'
 install:
-  - pip install coverage flake8
+  - pip install -U pip setuptools coverage flake8
   - pip install zc.buildout
   - buildout
   - 'pip install -I --global-option="build_ext" --global-option="-I$(pwd)/parts/cellml-api/include" --global-option="-L$(pwd)/parts/cellml-api/lib:$(pwd)/parts/cellml-api/lib/cgrs_modules" --global-option="-R$(pwd)/parts/cellml-api/lib:$(pwd)/parts/cellml-api/lib/cgrs_modules" cgrspy'
