@@ -40,6 +40,8 @@ setup(
         'requests',
 
         # development dependencies.
+        'repodono.model'
+        ' @ git+https://github.com/repodono/repodono.model.git@master',
         'repodono.task'
         ' @ git+https://github.com/repodono/repodono.task.git@master',
     ],

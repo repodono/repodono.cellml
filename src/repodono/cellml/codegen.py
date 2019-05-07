@@ -4,6 +4,8 @@ from os.path import (
     join,
     splitext,
 )
+from functools import partial
+from repodono.model.base import DeferredComputedMapping
 from repodono.cellml.bootstrap import (
     celedsexporter,
 )
@@ -20,9 +22,9 @@ class CodeGenerator(object):
                 definition)
 
     def __call__(self, model):
-        results = {}
+        results = DeferredComputedMapping()
         for key, exporter in self.exporters.items():
-            results[key] = exporter.generateCode(model)
+            results[key] = partial(exporter.generateCode, model)
         return results
 
 
